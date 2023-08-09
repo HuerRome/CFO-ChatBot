@@ -1,0 +1,17 @@
+
+
+
+/*--------------------------media queries----------------------------*/
+@media (max-width: 767px) {
+    /* Estilos para pantallas de celulares */
+}
+
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Estilos para pantallas de tablets */
+}
+ 
+
+@media (min-width: 1024px) {
+    /* Estilos para pantallas de computadoras de escritorio */
+}
