@@ -1,9 +1,312 @@
+/*--------------Montserrat---------------*/
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;600&family=Cutive+Mono&family=Fira+Code:wght@300;400;600&family=La+Belle+Aurore&family=Lexend+Deca:wght@100;200;300;400&family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,100;1,200&family=Open+Sans:wght@300;400&family=Poppins:wght@200;300;400&family=Sora:wght@100;300;400&display=swap');
 
 
+*{
+    margin: 0;
+    padding: 0;
+    color: #fafafa;
+    box-sizing: border-box;
+    font-family: "Fira Code",Poppins ,Arial, Helvetica, sans-serif;
+    font-family: Poppins ,Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Poppins ,Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    background-color: #080609;
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;         
+}
+  
+body::-webkit-scrollbar-track {  
+    background: #1d1d1d;   
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5CDCC6;  
+  background-image: linear-gradient(to top,#5dbeff,#5CDCC6);
+  border-radius: 20px;        
+  border: 3px solid #1d1d1d;
+}
+
+.container{
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,0.94);
+}
+
+/*-----------------------Cotenido de la pagina-----------------------*/
+nav{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    padding: 0 2vw;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #484848;
+}
+
+nav img{
+    width: 7vh;
+}
+
+nav h1{
+    font-size: 18px;
+}
+
+nav div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a{
+    color: #9e9e9e;
+    font-weight: bold;
+    margin-right: 3vw;
+}
+
+nav ion-icon, .menu{
+    display: none;
+}
+
+/*------------------------------main--------------------------------*/
+main{
+    width: 100%;
+    display: flex;
+    border-bottom-style: dashed;
+    border-bottom-width: 1px;
+    border-bottom-color: #484848;
+}
+
+main div:first-child{
+    width: 60%;
+    padding: 9vh 2%;
+}
+
+main div:first-child h2 span{
+    font-size: 14px;
+    color: #9e9e9e;
+    padding: 10px;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #484848;
+}
+
+main div:first-child h1{
+    font-size: 84px;
+    margin: 6vh 0 12vh 0;
+    font-weight: bold;
+    line-height: 84px;
+}
+
+main div:first-child a{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 16px 40px;
+    border: 1px solid #484848;
+}
+
+main div:first-child .a1{
+    color: #000;
+    background: #fafafa;
+}
+
+
+
+main div:last-child .a2:hover{
+    color: #000;
+    background: #fafafa;
+}
+
+main div:last-child{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main div:last-child img{
+    width: 80%;
+    filter:drop-shadow(1px 1px 3px #888);
+    filter:drop-shadow(2px 2px 6px #888);
+
+    -webkit-filter: drop-shadow( -5px -5px 5px #a1a1a1 );
+    filter: drop-shadow( -5px -5px 5px #747474 );
+}
+
+/*---------------------------information-----------------------------*/
+.information{
+    gap: 6%;
+    width: 100%;
+    display: flex;
+    margin: 6vh 0;
+    justify-content: center;
+}
+
+.information div{
+    width: 40%;
+    padding: 4vh 5vw;
+    border-style: dashed;
+    border-width: 1px;
+    border-color: #484848;
+}
+
+.information div h2{
+    font-size: 56px;
+    font-size: 50px;
+    line-height: 62px;
+    line-height: 54px;
+}
+
+.information div p{
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 2vh;
+    color: rgba(255,255,255,0.6);
+}
+
+/*-----------------------------foter---------------------------------*/
+footer{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-style: dashed;
+    border-top-width: 1px;
+    border-top-color: #484848;
+}
 
 /*--------------------------media queries----------------------------*/
 @media (max-width: 767px) {
     /* Estilos para pantallas de celulares */
+    nav div:last-child{
+        display: none;
+    }
+
+    nav ion-icon, .menu{
+        gap: 2vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ion-icon{
+        font-size: 5vh;
+        font-weight: bold;
+    }
+
+    .menu{
+        height: 60vh;
+        margin-top: 8vh;
+        position: fixed;
+        margin-left: -100vw;
+        padding: 20px 30px;
+        background: #1d1d1d;
+        justify-content: center;
+    }
+
+    .menu.active{
+        margin-left: 0vw;
+    }
+
+    /*------------------------------main--------------------------------*/ 
+    main div:first-child{
+        width: 100%;
+        padding: 9vh 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    main div:first-child h2 span{
+        font-size: 12px;
+        padding: 10px;
+    }
+    
+    main div:first-child h1{
+        font-size: 46px;
+        text-align: center;
+        margin: 6vh 0 12vh 0;
+        font-weight: bold;
+        line-height: 46px;
+    }
+    
+    main div:first-child a{
+        width: 90%;
+        margin: 0 5%;
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        padding: 16px 0px;
+        border: 1px solid #484848;
+    }
+
+    main div:first-child a:last-child{
+        margin-top: 10px;
+    }
+    
+    main div:last-child{
+        display: none;
+    }
+    
+    /*---------------------------information-----------------------------*/
+    .information{
+        gap: 6%;
+        width: 100%;
+        display: flex;
+        margin: 0vh 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .information div{
+        width: 100%;
+        padding: 8vh 8vw;
+        border-style: dashed;
+        border-width: 1px;
+        border-color: #484848;
+    }
+    
+    .information div h2{
+        text-align: center;
+        font-size: 42px;
+        line-height: 46px;
+    }
+    
+    .information div p{
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 6vh;
+    }
+
+    
+    /*-----------------------------foter---------------------------------*/
+    footer{
+        width: 100%;
+        height: auto;
+        padding: 2vh 4vw;
+        text-align: center;
+    }
 }
 
 
